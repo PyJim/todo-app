@@ -36,7 +36,7 @@ router.post('/', (req, res) => {
   res.status(201).json(newTodo);
 });
 
-// Update todo
+// Update a todo
 router.put('/:id', (req, res) => {
   const todos = readTodos();
   const index = todos.findIndex((t) => t.id === parseInt(req.params.id, 10));
